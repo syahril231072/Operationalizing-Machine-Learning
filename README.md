@@ -1,12 +1,10 @@
-*NOTE:* This file is a template that you can use to create the README for your project. The *TODO* comments below will highlight the information you should be sure to include.
+Deploying Bank Marketing Data
 
+Overview
+This project is part of the Udacity Azure ML Nanodegree. In this project, we use Azure ML to configure a cloud-based machine learning production model, deploy it, and consume Bank Marketing Dataset. This dataset contains data about prospective customer such as age,job,marital,education, and whether they subscribe to a term deposit with the bank. we seek to predict based on prospective customer data which kind of customer characteristic that they will subscribe to a term deposit with the bankThe model then create, publish, and consume a pipeline.build 
 
-# Your Project Title Here
+Architectural Diagram 
 
-*TODO:* Write an overview to your project.
-
-## Architectural Diagram
-*TODO*: Provide an architectual diagram of the project and give an introduction of each step.
 
 ## Key Steps
 *TODO*: Write a short discription of the key steps. Remeber to include all the screencasts required to demonstrate key steps. 
