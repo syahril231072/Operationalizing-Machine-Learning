@@ -8,8 +8,10 @@ This project is part of the Udacity Azure ML Nanodegree. In this project, we use
 
 ## Key Steps
 There are 7 key steps:
+
 1.Authentication
 First we run az login command, and the login on Azure ML account, then type azure-cli-ml to make sure extension is added or already installed, and then run az ad sp create-for-rbac --sdk-auth --name {name} to create role based account, and then use client Id and run az ad sp show --id xxxxxxxx-3af0-4065-8e14-xxxxxxxxxxxx and finally use Object Id and run az ml worskspace share -w Demo -g demo --user xxxxxxxx-cbdb-4cfd-089f-xxxxxxxxxxxx --role owner  to make service principal assign us as a role owner
+
 2.Automated ML Experiment
 First we make sure that dataset is available in Experiment
 ![](step%202%20-%20dataset%20is%20available.png)
@@ -21,6 +23,7 @@ Click on best model
 ![](step%202-%20best%20model%20(detail).png)
 3.Deploy the best model
 Above model tab, a triangle button (or Play button) will show with the "Deploy" word. Click on it. Deployment takes a few seconds. After a successful deployment, a green checkmark will appear on the "Run" tab and the "Deploy status" will show as succeed.
+
 4.Enable logging
 Download the config.json file from the top left menu in the Azure portal. Put this file in the same directory of other files. Find the previously deployed model to verify its name. It is needed in the SDK to select it for enabling logging. Run vim logs.py and change the name of deploy model and authentication to True. Run python logs.py.
 ![](step%204%20-%20log.py%20running.png)
@@ -44,9 +47,14 @@ Run Bankmarketing dataset with the AutoML module
 Run until “Published Pipeline overview”, showing a REST endpoint and a status of ACTIVE
 ![](step%207%20pipeline%20active%20and%20rest%20endpoint.png)
 Configure a pipeline with the Python SDK until showing the “Use RunDetails Widget” with the step runs
+![](step%207%20run%20detailed%20widget.png)
+Use a REST endpoint to interact with a Pipeline. ML studio showing the pipeline endpoint as Active.
+![](step%207%20ml%20studio%20pipeline%20is%20active.png)
+ML studio showing the scheduled run
+![](step%207%20ml%20pipeline%20is%20schedule.png)
 
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
+The link to a screen recording of the project in action: https://youtu.be/ZEqKavpAtuo
 
 ## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+It would be better the Bank Marketing Dataset is cleanse first, so the model would be more accurate. Running AutoML should also not to be reduce to 1 hour from the default of 3 hours.
